@@ -1,0 +1,30 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        box-shadow: none !important;
+        background: white;
+        margin: 0 !important;
+    }
+
+    .page {
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
+
+.google-sans {
+     font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
