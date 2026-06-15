@@ -9,9 +9,7 @@ Passionate about building modern, scalable web applications with **8+ years** of
 ## 🛠️ Technologies I Work With
 
 **Frontend:** ReactJS, NextJS, VueJS, NuxtJS, TypeScript, TailwindCSS
-
 **Backend:** NodeJS, Express, NestJS, Prisma
-
 **Tools:** Git, VS Code, Figma, Postman
 
 ---
