@@ -12,7 +12,21 @@
     </head>
 
     <body class="bg-gray-100 m-5 shadow-none google-sans *:text-[14px] text-gray-800">
-        <div class="page max-w-[210mm] min-h-[297mm] mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
+        <!-- ACTION BAR (hidden in print) -->
+        <header class="no-print sticky top-0 z-10 -mx-5 -mt-5 mb-5 px-5 bg-white shadow-sm">
+            <div class="toolbar mx-auto flex items-center justify-center gap-3 py-3">
+                <button type="button" data-action="copy-link" class="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-800 shadow-sm transition hover:bg-gray-50 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.101m-.758-4.899a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.656l-1.1 1.1" /></svg>
+                    <span data-label="Copy Share Link">Copy Share Link</span>
+                </button>
+                <button type="button" data-action="print" class="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-medium text-white shadow-sm transition hover:bg-gray-800 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2m2 4h6a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2zm8-12V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4" /></svg>
+                    <span data-label="Print as PDF">Print as PDF</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
             <!-- HEADER  -->
             <header class="header text-center">
                 <div class="mb-1">
@@ -290,5 +304,6 @@
                 <!-- /right -->
             </main>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -3,18 +3,36 @@
     margin: 0;
 }
 
+/* A4 sheet: 210mm × 297mm (border-box, padding included) */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+}
+
+/* Toolbar container matches sheet width */
+.toolbar {
+    width: 210mm;
+    max-width: 100%;
+}
+
 @media print {
+    html,
     body {
+        width: 210mm;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        background: white !important;
+    }
+
+    body {
         box-shadow: none !important;
-        background: white;
         margin: 0 !important;
     }
 
     .page {
         box-shadow: none !important;
         margin: 0 !important;
+        border-radius: 0 !important;
     }
 
     .no-print {
@@ -23,7 +41,7 @@
 }
 
 .google-sans {
-     font-family: "Google Sans", sans-serif;
+    font-family: "Google Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
