@@ -1,10 +1,17 @@
 (function () {
-    function flash(button, text) {
+    function setCopied(button, copied) {
         const label = button.querySelector("[data-label]");
-        const original = label.dataset.label;
-        label.textContent = text;
+        label.textContent = copied ? "Link Copied!" : label.dataset.label;
+        button.querySelector('[data-icon="default"]')?.classList.toggle("hidden", copied);
+        button.querySelector('[data-icon="copied"]')?.classList.toggle("hidden", !copied);
+        button.classList.toggle("text-gray-800", !copied);
+        button.classList.toggle("text-green-600", copied);
+    }
+
+    function flash(button) {
+        setCopied(button, true);
         clearTimeout(button._resetTimer);
-        button._resetTimer = setTimeout(() => (label.textContent = original), 2000);
+        button._resetTimer = setTimeout(() => setCopied(button, false), 2000);
     }
 
     async function copyLink(button) {
@@ -25,7 +32,7 @@
                 document.body.removeChild(input);
                 if (!ok) throw new Error("copy failed");
             }
-            flash(button, "Link Copied!");
+            flash(button);
         } catch (err) {
             window.prompt("Copy this link:", url);
         }
