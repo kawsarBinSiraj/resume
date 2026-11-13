@@ -16,6 +16,10 @@
                 border-radius: 2px;
                 padding: 0 2px;
             }
+            /* Tab panels size to content (override A4 min-height from style.css) */
+            [role="tabpanel"] .page {
+                min-height: 0;
+            }
             /* Main tabs: underline style */
             .main-tab[aria-selected="true"] {
                 color: #000;
