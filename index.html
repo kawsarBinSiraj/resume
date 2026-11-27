@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kawsar Bin Siraj | Senior Frontend Developer</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="bg-gray-100 m-5 shadow-none google-sans *:text-[14px] text-gray-800">
+        <!-- ACTION BAR (hidden in print) -->
+        <header class="no-print sticky top-0 z-10 -mx-5 -mt-5 mb-5 px-5 bg-white border-b border-gray-200">
+            <div class="toolbar mx-auto">
+                <!-- Row 1: resume version switcher + print -->
+                <div class="flex items-center justify-between gap-4 pt-3">
+                    <nav aria-label="Resume versions" class="inline-flex rounded-lg bg-gray-100 p-1 text-[13px]">
+                        <a href="./" aria-current="page" class="rounded-md bg-white px-3 py-1 font-semibold text-black shadow-sm">Frontend</a>
+                        <a href="fullstack/" class="rounded-md px-3 py-1 font-medium text-gray-500 transition hover:text-black">Full Stack</a>
+                        <a href="ai-engineer/" class="rounded-md px-3 py-1 font-medium text-gray-500 transition hover:text-black">AI Engineer</a>
+                    </nav>
+                    <button type="button" data-action="print" class="inline-flex items-center gap-2 rounded-lg bg-black px-3.5 py-1.5 text-[13px] font-medium text-white shadow-sm transition hover:bg-gray-800 active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2m2 4h6a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2zm8-12V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4" /></svg>
+                        <span>Print as PDF</span>
+                    </button>
+                </div>
+
+                <!-- Row 2: document tabs for this resume -->
+                <div role="tablist" aria-label="Document" class="mt-1.5 flex gap-4 text-[12px]">
+                    <button type="button" role="tab" data-view-tab="resume" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Resume</button>
+                    <button type="button" role="tab" data-view-tab="email" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Email Cover Letter</button>
+                    <button type="button" role="tab" data-view-tab="text" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Text Cover Letter</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cover letter fields (Email / Text tabs only) -->
+        <div data-cover-only hidden class="no-print toolbar mx-auto mb-3 grid grid-cols-1 sm:grid-cols-3 gap-2 rounded-lg bg-white px-3 py-2 shadow-sm">
+            <label class="block">
+                <span class="text-[10px] uppercase tracking-wide text-gray-500">Company</span>
+                <input data-input="company" type="text" placeholder="e.g. Acme Inc." class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
+            </label>
+            <label class="block">
+                <span class="text-[10px] uppercase tracking-wide text-gray-500">Hiring Manager</span>
+                <input data-input="manager" type="text" placeholder="Hiring Manager" class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
+            </label>
+            <label class="block">
+                <span class="text-[10px] uppercase tracking-wide text-gray-500">Position (optional override)</span>
+                <input data-input="role" type="text" placeholder="Senior Frontend Developer" class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
+            </label>
+        </div>
+
+        <!-- ══════════════ RESUME ══════════════ -->
+        <section data-view="resume">
+            <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
+                <!-- HEADER  -->
+                <header class="header text-center">
+                    <div class="mb-1">
+                        <h1 class="text-5xl font-[100] text-black">Kawsar Bin Siraj</h1>
+                        <p class="text-xl">Senior Frontend Developer &ndash; React.js | Next.js | TypeScript</p>
+                        <p class="text-[13px] uppercase tracking-wider text-gray-500 mt-0.5">Frontend-Focused Full Stack &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; NestJS &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; AI / LLM</p>
+                    </div>
+                </header>
+
+                <!-- decorative divider -->
+                <div class="relative flex items-center justify-center w-full">
+                    <div class="flex-1 h-px bg-gradient-to-r from-transparent to-black"></div>
+                    <div class="flex items-center gap-1.5 mx-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-black opacity-50"></div>
+                        <div class="w-2 h-2 rounded-full bg-black opacity-85"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-black"></div>
+                        <div class="w-2 h-2 rounded-full bg-black opacity-85"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-black opacity-50"></div>
+                    </div>
+                    <div class="flex-1 h-px bg-gradient-to-l from-transparent to-black"></div>
+                </div>
+
+                <main id="main" class="grid grid-cols-[1.15fr_2px_2fr] gap-6">
+                    <!-- ══ LEFT COLUMN ══ -->
+                    <div class="content-part space-y-5 text-right">
+                        <!-- Contact -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Contact</h2>
+                            <ul class="flex flex-col items-end text-right text-gray-800">
+                                <li class="flex items-center gap-2">
+                                    <a href="mailto:kawsar.csestd@gmail.com">kawsar.csestd@gmail.com</a>
+                                    <span class="size-1 block bg-black"></span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="tel:+8801775686936">+880 1775686936</a>
+                                    <span class="size-1 block bg-black"></span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-gray-600">Dhaka, Bangladesh</span>
+                                    <span class="size-1 block bg-black"></span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="https://kawsarbinsiraj.github.io/" class="text-blue-700 hover:underline" target="_blank">kawsarbinsiraj.github.io</a>
+                                    <span class="size-1 block bg-black"></span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="https://www.linkedin.com/in/kawsar-bin-siraj-669270249/" class="text-blue-700 hover:underline" target="_blank"
+                                        >linkedin.com/in/kawsar-bin-siraj</a
+                                    >
+                                    <span class="size-1 block bg-black"></span>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Skills -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Skills</h2>
+                            <div class="space-y-2 text-black leading-tight">
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">Frontend</span>
+                                        <p>React.js, Next.js, Vue.js, Nuxt.js, Angular, SvelteJS, ElectronJS</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">State Management</span>
+                                        <p>Redux Toolkit, Zustand, React Query, NgRx, Pinia</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">Languages &amp; Styling</span>
+                                        <p>TypeScript, JavaScript (ES6+), Tailwind CSS, Sass, GSAP</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">Backend &amp; Database</span>
+                                        <p>Node.js, NestJS, Express.js, PostgreSQL, Prisma, TypeORM</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">AI &amp; LLM</span>
+                                        <p>LLM APIs, RAG, MCP, Claude Code, Cursor, Copilot</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+
+                                <div class="flex items-start justify-end gap-3">
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wide text-gray-500 block">Tools &amp; Practices</span>
+                                        <p>Git, Vite, Webpack, Jest, CI/CD, REST, GraphQL, Agile</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-1"></span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Education -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Education</h2>
+                            <div class="most-education space-y-2">
+                                <div>
+                                    <p class="font-bold text-gray-800">B.Sc. in Computer Science &amp; Engineering</p>
+                                    <p>Bangladesh University</p>
+                                    <p class="text-gray-500 text-[13px] italic">2017–2020 (4 Year Program)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Projects -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1 leading-tight">Projects</h2>
+                            <div class="projects text-right space-y-1.5">
+                                <div class="p-0 flex items-start gap-3 justify-end">
+                                    <div>
+                                        <p class="text-gray-800 text-[14px]">
+                                            <a target="_blank" class="text-blue-700 hover:underline" href="https://trainr.cloud/">Trainr</a>
+                                        </p>
+                                        <p class="text-[12px] text-gray-600">AI-powered fitness platform with LLM-generated workout plans.</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-2.5"></span>
+                                </div>
+
+                                <div class="p-0 flex items-start gap-3 justify-end">
+                                    <div>
+                                        <p class="text-gray-800 text-[14px]">
+                                            <a target="_blank" class="text-blue-700 hover:underline" href="https://sisimpurvillage.com/">Sisimpur Village</a>
+                                        </p>
+                                        <p class="text-[12px] text-gray-600">Interactive educational platform, based on Bangladesh's version of Sesame.</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-2.5"></span>
+                                </div>
+
+                                <div class="p-0 flex items-start gap-3 justify-end">
+                                    <div>
+                                        <p class="text-gray-800 text-[14px]">
+                                            <a target="_blank" class="text-blue-700 hover:underline" href="https://qabrains.com/">QA Brains</a>
+                                        </p>
+                                        <p class="text-[12px] text-gray-600">QA community platform for knowledge exchange, advice, and discussions.</p>
+                                    </div>
+                                    <span class="size-1 shrink-0 block bg-black mt-2.5"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- /left -->
+
+                    <div class="verticle-line border-r h-full"></div>
+
+                    <!-- ══ RIGHT COLUMN ══ -->
+                    <div class="content-part space-y-5 text-left">
+                        <!-- Professional Summary -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Professional Summary</h2>
+                            <p class="text-gray-800 text-[13px]">
+                                Senior Frontend Developer with <strong>8+ years of experience</strong> building scalable, high-performance web apps with
+                                <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Vue.js</strong>/<strong>Nuxt.js</strong>,
+                                <strong>Tailwind CSS</strong>, and <strong>GSAP</strong>. Full stack capable with <strong>Node.js</strong>, <strong>NestJS</strong>,
+                                and <strong>PostgreSQL</strong>. Builds AI features with <strong>LLM APIs</strong>, <strong>RAG</strong>, <strong>MCP</strong>;
+                                uses <strong>Claude Code</strong>, <strong>Cursor</strong>, <strong>Copilot</strong> daily. Leads frontend teams, drives code
+                                reviews, and ships production-grade UX.
+                            </p>
+                        </section>
+
+                        <!-- Professional Experience -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Professional Experience</h2>
+                            <div class="experinces space-y-3">
+                                <!-- Riseup Labs -->
+                                <div class="p-0">
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-[15px]">Senior Software Engineer</p>
+                                        <p>
+                                            Riseup Labs &nbsp;/&nbsp;
+                                            <span class="text-gray-500 text-[13px] italic">Nov 2022 – <span class="text-blue-700">Present</span></span>
+                                        </p>
+                                    </div>
+                                    <ul class="[list-style-type:square] space-y-0.5 italic text-gray-700 pl-8 text-[13px]">
+                                        <li>Lead Developer owning projects from conception to delivery.</li>
+                                        <li>Architected Next.js apps with reusable, typed component systems.</li>
+                                        <li>Shipped AI features with LLM APIs, RAG, and MCP integrations.</li>
+                                        <li>Built supporting NestJS APIs and PostgreSQL schemas end to end.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- API Ltd. -->
+                                <div class="p-0">
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-[15px]">Senior Frontend Developer</p>
+                                        <p>API Ltd. &nbsp;/&nbsp; <span class="text-gray-600 text-[13px] italic">Oct 2021 – Oct 2022</span></p>
+                                    </div>
+                                    <ul class="[list-style-type:square] space-y-0.5 italic text-gray-700 pl-8 text-[13px]">
+                                        <li>Conducted 100+ code reviews enforcing frontend standards.</li>
+                                        <li>Built Node.js/Express endpoints alongside React frontends.</li>
+                                        <li>Added ESLint, Prettier, Husky to CI/CD, reducing production bugs.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Getweb Inc. -->
+                                <div class="p-0">
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-[15px]">Associate Frontend Developer</p>
+                                        <p>Getweb Inc. &nbsp;/&nbsp; <span class="text-gray-600 text-[13px] italic">Sep 2020 – Sep 2021</span></p>
+                                    </div>
+                                    <ul class="[list-style-type:square] space-y-0.5 italic text-gray-700 pl-8 text-[13px]">
+                                        <li>Partnered with design, backend, QA, and product on API contracts.</li>
+                                        <li>Cut initial load time 45% via bundle analysis and tree shaking.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Unitor Tech Ltd. -->
+                                <div class="p-0">
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-[15px]">Frontend Developer</p>
+                                        <p>Unitor Tech Ltd. &nbsp;/&nbsp; <span class="text-gray-600 text-[13px] italic">Feb 2017 – Aug 2020</span></p>
+                                    </div>
+                                    <ul class="[list-style-type:square] space-y-0.5 italic text-gray-700 pl-8 text-[13px]">
+                                        <li>Built responsive UI with JavaScript, jQuery, and Bootstrap.</li>
+                                        <li>Migrated legacy jQuery code to modern ES6+ JavaScript.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Open Source / Contributions -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Open Source &amp; Contributions</h2>
+                            <div class="items space-y-1">
+                                <p class="text-gray-700 text-[13px] italic">Published VS Code extensions, npm packages, and technical articles.</p>
+                                <ul class="flex flex-wrap items-center gap-x-2 gap-y-0 text-sm">
+                                    <li>
+                                        <a href="https://marketplace.visualstudio.com/publishers/KawsarBinSiraj" target="_blank" class="text-blue-700 hover:underline"
+                                            >VS Code Extensions</a
+                                        >
+                                    </li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://www.npmjs.com/~ibn-siraj" target="_blank" class="text-blue-700 hover:underline">NPM Packages</a></li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://cssbattle.dev/player/kawsar_bin_siraj" target="_blank" class="text-blue-700 hover:underline">CSSBattle</a></li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://dev.to/kawsarbinsiraj" target="_blank" class="text-blue-700 hover:underline">Dev.to Articles</a></li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://medium.com/@kawsar.csestd" target="_blank" class="text-blue-700 hover:underline">Medium</a></li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://codepen.io/kawsarBinSiraj/" target="_blank" class="text-blue-700 hover:underline">CodePen</a></li>
+                                    <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                    <li><a href="https://github.com/kawsarBinSiraj" target="_blank" class="text-blue-700 hover:underline">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Competitive Programming -->
+                        <section class="section space-y-2">
+                            <h2 class="text-[18px] text-black font-bold uppercase border-b pb-1">Competitive Programming</h2>
+                            <ul class="flex items-center gap-2 text-sm">
+                                <li><a href="https://leetcode.com/kawsarBinSiraj/" target="_blank" class="text-blue-700 hover:underline">LeetCode</a></li>
+                                <li><span class="size-1 shrink-0 block bg-black rounded-full"></span></li>
+                                <li>
+                                    <a href="https://www.hackerrank.com/kawsarBinSiraj?hr_r=1" target="_blank" class="text-blue-700 hover:underline">HackerRank</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <!-- /right -->
+                </main>
+            </div>
+        </section>
+
+        <!-- ══════════════ LETTER SOURCE (hidden; feeds the Text Cover Letter tab) ══════════════ -->
+        <div hidden data-letter-source>
+            <div data-body class="space-y-3">
+                <p class="mt-4">Dear <span data-field="manager" data-default="Hiring Manager"></span>,</p>
+
+                <p>
+                    I'm excited to apply for the <span data-field="role" data-default="Senior Frontend Developer"></span> role at <span data-field="company" data-default="[Company Name]"></span>. I'm a frontend-focused full stack engineer: for more than
+                    eight years I've built scalable, high-performance web applications with React.js, Next.js, and TypeScript, backed by hands-on Node.js, NestJS, and PostgreSQL work. For the last three I've worked as Lead Developer at Riseup Labs, owning projects from first idea to production.
+                </p>
+
+                <p>
+                    At Riseup Labs I architect Next.js applications on reusable, typed component systems, so teams ship features quickly without the UI drifting apart. I've also shipped AI features with LLM APIs, RAG, and MCP. One example is
+                    Trainr, an AI-powered fitness platform that generates workout plans with LLMs. Because I build the NestJS and PostgreSQL services behind these interfaces myself, I design frontends with the whole request path in mind, not
+                    only the screen.
+                </p>
+
+                <p>
+                    Performance and code quality are habits for me. At Getweb Inc. I cut initial load time by 45% through bundle analysis and tree shaking. At API Ltd. I ran more than 100 code reviews to hold the team to shared frontend
+                    standards, and added ESLint, Prettier, and Husky to the CI/CD pipeline, which reduced production bugs. I work comfortably across React, Vue/Nuxt, Angular, and Svelte, with Redux Toolkit, Zustand, React Query, Tailwind
+                    CSS, and GSAP for motion-rich interfaces such as Sisimpur Village, an interactive learning platform based on Bangladesh's version of Sesame Street.
+                </p>
+
+                <p>Outside client work, I publish VS Code extensions and npm packages and write technical articles on Dev.to and Medium. I use AI-assisted development tools such as Claude Code, Cursor, and GitHub Copilot every day to move faster while keeping the same review bar.</p>
+
+                <p>
+                    I'd welcome the chance to discuss how I can help <span data-field="company" data-default="[Company Name]"></span> build fast, polished, and maintainable products. Thank you for your time and consideration.
+                </p>
+
+                <p class="!mt-6">
+                    Sincerely,<br />
+                    <span class="mt-1 inline-block text-2xl font-[100] text-black">Kawsar Bin Siraj</span><br />
+                    <span class="text-[13px] text-gray-600">Senior Software Engineer &middot; kawsar.csestd@gmail.com &middot; +880 1775686936</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- ══════════════ COVER LETTER · EMAIL ══════════════ -->
+        <section data-view="email" hidden>
+            <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
+                <div class="flex items-center justify-between gap-2 border-b pb-1">
+                    <h2 class="text-[18px] text-black font-bold uppercase">Email &middot; Frontend</h2>
+                    <div class="no-print flex gap-2">
+                        <button type="button" data-copy-target="email-subject" class="rounded border border-gray-300 px-2.5 py-1 text-[12px] font-medium hover:bg-gray-50 active:scale-95"><span data-copy-label="Copy Subject">Copy Subject</span></button>
+                        <button type="button" data-copy-target="email-body" class="rounded bg-black px-2.5 py-1 text-[12px] font-medium text-white hover:bg-gray-800 active:scale-95"><span data-copy-label="Copy Body">Copy Body</span></button>
+                    </div>
+                </div>
+                <p class="text-[13px]"><span class="text-[11px] uppercase tracking-wide text-gray-500">Subject:</span> <span id="email-subject" class="font-medium text-black">Application for <span data-field="role" data-default="Senior Frontend Developer"></span> &ndash; Kawsar Bin Siraj</span></p>
+                <div id="email-body" class="rounded-md border border-gray-200 bg-gray-50 p-4 text-[13px] leading-relaxed">
+                    <p>Dear <span data-field="manager" data-default="Hiring Manager"></span>,</p>
+                    <p class="mt-3">I'm writing to apply for the <span data-field="role" data-default="Senior Frontend Developer"></span> position at <span data-field="company" data-default="[Company Name]"></span>. I'm a frontend-focused full stack engineer with 8+ years of experience building scalable, high-performance web applications with React.js, Next.js, and TypeScript, and I'm equally comfortable working in Angular and Vue.js. On the backend, I work with Node.js, NestJS, and PostgreSQL.</p>
+                    <p class="mt-3">A few highlights:</p>
+                    <div class="mt-1">
+                        <div>&bull; Lead Developer at Riseup Labs, owning projects from conception to delivery and architecting Next.js apps on reusable, typed component systems.</div>
+                        <div>&bull; Built the NestJS APIs and PostgreSQL schemas behind my UIs end to end, so features ship without waiting on a separate backend team.</div>
+                        <div>&bull; Shipped AI features with LLM APIs, RAG, and MCP, including Trainr, an AI-powered fitness platform.</div>
+                        <div>&bull; Use AI-assisted development tools such as Claude Code, Cursor, and GitHub Copilot daily to ship faster without lowering the review bar.</div>
+                        <div>&bull; Cut initial load time by 45% through bundle analysis and tree shaking, and ran 100+ code reviews enforcing frontend standards.</div>
+                    </div>
+                    <p class="mt-3">My resume and cover letter are attached. You can also view my resume online at https://kawsarbinsiraj.github.io/resume/ and my portfolio at https://kawsarbinsiraj.github.io/</p>
+                    <p class="mt-3">I'd welcome the chance to discuss how I can contribute to <span data-field="company" data-default="[Company Name]"></span>. Thank you for your time and consideration.</p>
+                    <p class="mt-3">Best regards,<br />Kawsar Bin Siraj<br />+880 1775686936 &middot; kawsar.csestd@gmail.com<br />linkedin.com/in/kawsar-bin-siraj-669270249</p></div>
+            </div>
+        </section>
+
+        <!-- ══════════════ COVER LETTER · TEXT ONLY (generated from the letter source) ══════════════ -->
+        <section data-view="text" hidden>
+            <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
+                <div class="flex items-center justify-between gap-2 border-b pb-1">
+                    <h2 class="text-[18px] text-black font-bold uppercase">Cover Letter Text &middot; Frontend</h2>
+                    <button type="button" data-copy-target="plain-text" class="no-print rounded bg-black px-2.5 py-1 text-[12px] font-medium text-white hover:bg-gray-800 active:scale-95"><span data-copy-label="Copy Text">Copy Text</span></button>
+                </div>
+                <p class="no-print text-gray-500 text-[13px]">Plain text for application forms and LinkedIn / job-portal text boxes. <span data-text-count class="text-gray-700"></span></p>
+                <div id="plain-text" class="whitespace-pre-wrap rounded-md border border-gray-200 bg-gray-50 p-4 text-[13px] leading-relaxed"></div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>

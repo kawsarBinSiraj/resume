@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kawsar Bin Siraj | Cover Letters</title>
+        <!-- Cover letters now live inside each resume page (Cover Letter tabs). Redirect old links, e.g. cover.html#text-fullstack → fullstack/#text -->
+        <script>
+            (function () {
+                const [main, sub] = location.hash.slice(1).split("-");
+                const view = main === "text" ? "text" : "email";
+                const dir = sub === "fullstack" ? "fullstack/" : "";
+                const local = location.protocol === "file:";
+                location.replace(dir + (local ? "index.html" : (dir ? "" : "./")) + "#" + view);
+            })();
+        </script>
+        <noscript><meta http-equiv="refresh" content="0; url=./#email" /></noscript>
+    </head>
+    <body>
+        <p>Cover letters moved. <a href="./#email">Open resume &rarr; Cover Letter</a></p>
+    </body>
+</html>
