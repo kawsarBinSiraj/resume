@@ -1,5 +1,7 @@
 (function () {
-    const VIEWS = ["resume", "email", "text"];
+    // Views this page offers (Configurable has Resume only)
+    const VIEWS = [...document.querySelectorAll("[data-view-tab]")].map((tab) => tab.dataset.viewTab);
+    if (!VIEWS.length) VIEWS.push("resume");
     const STORE_KEY = "cover-fields";
     const inputs = document.querySelectorAll("[data-input]");
     const navLinks = document.querySelectorAll('nav[aria-label="Resume versions"] a');
@@ -40,7 +42,7 @@
             // Highlight only true placeholders (bracketed defaults)
             el.classList.toggle("ph-empty", !value && el.dataset.default.startsWith("["));
         });
-        saveFields(values);
+        if (inputs.length) saveFields(values);
         renderPlainText();
     }
 

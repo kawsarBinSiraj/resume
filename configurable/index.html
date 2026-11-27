@@ -25,7 +25,7 @@
                             <a href="../ai-engineer/" class="rounded px-3 py-0.5 font-medium text-gray-500 transition hover:text-black">AI Engineer</a>
                         </div>
                         <span aria-hidden="true" class="h-5 w-px bg-gray-200"></span>
-                        <a href="../configurable/" aria-current="page" class="inline-flex items-center gap-1.5 rounded-md border border-blue-600 bg-blue-600 px-3 py-1 text-[13px] font-semibold text-white shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" /><circle cx="16" cy="6" r="2" /><circle cx="10" cy="12" r="2" /><circle cx="18" cy="18" r="2" /></svg><span>Configurable</span></a>
+                        <a href="../configurable/" aria-current="page" class="inline-flex items-center gap-1.5 rounded-md border border-gray-700 bg-gray-700 px-3 py-1 text-[13px] font-semibold text-white shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" /><circle cx="16" cy="6" r="2" /><circle cx="10" cy="12" r="2" /><circle cx="18" cy="18" r="2" /></svg><span>Configurable</span></a>
                     </nav>
                     <div class="flex items-center gap-2">
                         <a href="../applied-jobs/index.html" class="inline-flex items-center gap-1.5 rounded-md border border-gray-300 bg-white px-3 py-1 text-[13px] font-medium text-gray-700 shadow-sm transition hover:bg-gray-50 active:scale-95">
@@ -42,27 +42,9 @@
                 <!-- Row 2: document tabs for this resume -->
                 <div role="tablist" aria-label="Document" class="mt-1.5 flex gap-4 text-[12px]">
                     <button type="button" role="tab" data-view-tab="resume" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Resume</button>
-                    <button type="button" role="tab" data-view-tab="email" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Email Cover Letter</button>
-                    <button type="button" role="tab" data-view-tab="text" class="view-tab -mb-px border-b-2 border-transparent pb-1.5 pt-0.5 font-medium text-gray-500 transition hover:text-black">Text Cover Letter</button>
                 </div>
             </div>
         </header>
-
-        <!-- Cover letter fields (Email / Text tabs only) -->
-        <div data-cover-only hidden class="no-print toolbar mx-auto mb-3 grid grid-cols-1 sm:grid-cols-3 gap-2 rounded-lg bg-white px-3 py-2 shadow-sm">
-            <label class="block">
-                <span class="text-[10px] uppercase tracking-wide text-gray-500">Company</span>
-                <input data-input="company" type="text" placeholder="e.g. Acme Inc." class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
-            </label>
-            <label class="block">
-                <span class="text-[10px] uppercase tracking-wide text-gray-500">Hiring Manager</span>
-                <input data-input="manager" type="text" placeholder="Hiring Manager" class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
-            </label>
-            <label class="block">
-                <span class="text-[10px] uppercase tracking-wide text-gray-500">Position (optional override)</span>
-                <input data-input="role" type="text" placeholder="Senior Frontend Developer" class="mt-0.5 w-full rounded-md border border-gray-300 px-2 py-1 text-[12px] focus:border-black focus:outline-none" />
-            </label>
-        </div>
 
         <!-- ══════════════ RESUME ══════════════ -->
         <section data-view="resume">
@@ -343,82 +325,6 @@
                     </div>
                     <!-- /right -->
                 </main>
-            </div>
-        </section>
-
-        <!-- ══════════════ LETTER SOURCE (hidden; feeds the Text Cover Letter tab) ══════════════ -->
-        <div hidden data-letter-source>
-            <div data-body class="space-y-3">
-                <p class="mt-4">Dear <span data-field="manager" data-default="Hiring Manager"></span>,</p>
-
-                <p>
-                    I'm excited to apply for the <span data-field="role" data-default="Senior Frontend Developer"></span> role at <span data-field="company" data-default="[Company Name]"></span>. I'm a frontend-focused full stack engineer: for more than
-                    eight years I've built scalable, high-performance web applications with React.js, Next.js, and TypeScript, backed by hands-on Node.js, NestJS, and PostgreSQL work. For the last three I've worked as Lead Developer at Riseup Labs, owning projects from first idea to production.
-                </p>
-
-                <p>
-                    At Riseup Labs I architect Next.js applications on reusable, typed component systems, so teams ship features quickly without the UI drifting apart. I've also shipped AI features with LLM APIs, RAG, and MCP. One example is
-                    Trainr, an AI-powered fitness platform that generates workout plans with LLMs. Because I build the NestJS and PostgreSQL services behind these interfaces myself, I design frontends with the whole request path in mind, not
-                    only the screen.
-                </p>
-
-                <p>
-                    Performance and code quality are habits for me. At Getweb Inc. I cut initial load time by 45% through bundle analysis and tree shaking. At API Ltd. I ran more than 100 code reviews to hold the team to shared frontend
-                    standards, and added ESLint, Prettier, and Husky to the CI/CD pipeline, which reduced production bugs. I work comfortably across React, Vue/Nuxt, Angular, and Svelte, with Redux Toolkit, Zustand, React Query, Tailwind
-                    CSS, and GSAP for motion-rich interfaces such as Sisimpur Village, an interactive learning platform based on Bangladesh's version of Sesame Street.
-                </p>
-
-                <p>Outside client work, I publish VS Code extensions and npm packages and write technical articles on Dev.to and Medium. I use AI-assisted development tools such as Claude Code, Cursor, and GitHub Copilot every day to move faster while keeping the same review bar.</p>
-
-                <p>
-                    I'd welcome the chance to discuss how I can help <span data-field="company" data-default="[Company Name]"></span> build fast, polished, and maintainable products. Thank you for your time and consideration.
-                </p>
-
-                <p class="!mt-6">
-                    Sincerely,<br />
-                    <span class="mt-1 inline-block text-2xl font-[100] text-black">Kawsar Bin Siraj</span><br />
-                    <span class="text-[13px] text-gray-600">Senior Software Engineer &middot; kawsar.csestd@gmail.com &middot; +880 1775686936</span>
-                </p>
-            </div>
-        </div>
-
-        <!-- ══════════════ COVER LETTER · EMAIL ══════════════ -->
-        <section data-view="email" hidden>
-            <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
-                <div class="flex items-center justify-between gap-2 border-b pb-1">
-                    <h2 class="text-[18px] text-black font-bold uppercase">Email &middot; Frontend</h2>
-                    <div class="no-print flex gap-2">
-                        <button type="button" data-copy-target="email-subject" class="rounded border border-gray-300 px-2.5 py-1 text-[12px] font-medium hover:bg-gray-50 active:scale-95"><span data-copy-label="Copy Subject">Copy Subject</span></button>
-                        <button type="button" data-copy-target="email-body" class="rounded bg-black px-2.5 py-1 text-[12px] font-medium text-white hover:bg-gray-800 active:scale-95"><span data-copy-label="Copy Body">Copy Body</span></button>
-                    </div>
-                </div>
-                <p class="text-[13px]"><span class="text-[11px] uppercase tracking-wide text-gray-500">Subject:</span> <span id="email-subject" class="font-medium text-black">Application for <span data-field="role" data-default="Senior Frontend Developer"></span> &ndash; Kawsar Bin Siraj</span></p>
-                <div id="email-body" class="rounded-md border border-gray-200 bg-gray-50 p-4 text-[13px] leading-relaxed">
-                    <p>Dear <span data-field="manager" data-default="Hiring Manager"></span>,</p>
-                    <p class="mt-3">I'm writing to apply for the <span data-field="role" data-default="Senior Frontend Developer"></span> position at <span data-field="company" data-default="[Company Name]"></span>. I'm a frontend-focused full stack engineer with 6+ years of experience building scalable, high-performance web applications with React.js, Next.js, and TypeScript, and I'm equally comfortable working in Angular and Vue.js. On the backend, I work with Node.js, NestJS, and PostgreSQL.</p>
-                    <p class="mt-3">A few highlights:</p>
-                    <div class="mt-1">
-                        <div>&bull; Lead Developer at Riseup Labs, owning projects from conception to delivery and architecting Next.js apps on reusable, typed component systems.</div>
-                        <div>&bull; Built the NestJS APIs and PostgreSQL schemas behind my UIs end to end, so features ship without waiting on a separate backend team.</div>
-                        <div>&bull; Shipped AI features with LLM APIs, RAG, and MCP, including Trainr, an AI-powered fitness platform.</div>
-                        <div>&bull; Use AI-assisted development tools such as Claude Code, Cursor, and GitHub Copilot daily to ship faster without lowering the review bar.</div>
-                        <div>&bull; Cut initial load time by 45% through bundle analysis and tree shaking, and ran 100+ code reviews enforcing frontend standards.</div>
-                    </div>
-                    <p class="mt-3">My resume and cover letter are attached. You can also view my resume online at https://kawsarbinsiraj.github.io/resume/ and my portfolio at https://kawsarbinsiraj.github.io/</p>
-                    <p class="mt-3">I'd welcome the chance to discuss how I can contribute to <span data-field="company" data-default="[Company Name]"></span>. Thank you for your time and consideration.</p>
-                    <p class="mt-3">Best regards,<br />Kawsar Bin Siraj<br />+880 1775686936 &middot; kawsar.csestd@gmail.com<br />linkedin.com/in/kawsar-bin-siraj-669270249</p></div>
-            </div>
-        </section>
-
-        <!-- ══════════════ COVER LETTER · TEXT ONLY (generated from the letter source) ══════════════ -->
-        <section data-view="text" hidden>
-            <div class="page mx-auto bg-white rounded-lg py-6 px-8 space-y-4">
-                <div class="flex items-center justify-between gap-2 border-b pb-1">
-                    <h2 class="text-[18px] text-black font-bold uppercase">Cover Letter Text &middot; Frontend</h2>
-                    <button type="button" data-copy-target="plain-text" class="no-print rounded bg-black px-2.5 py-1 text-[12px] font-medium text-white hover:bg-gray-800 active:scale-95"><span data-copy-label="Copy Text">Copy Text</span></button>
-                </div>
-                <p class="no-print text-gray-500 text-[13px]">Plain text for application forms and LinkedIn / job-portal text boxes. <span data-text-count class="text-gray-700"></span></p>
-                <div id="plain-text" class="whitespace-pre-wrap rounded-md border border-gray-200 bg-gray-50 p-4 text-[13px] leading-relaxed"></div>
             </div>
         </section>
 
